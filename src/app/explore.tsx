@@ -1,9 +1,9 @@
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { exportPdf } from '../../lib/pdf';
-import { computeStats, rangeColor } from '../../lib/stats';
-import { getReadings, Reading } from '../../lib/storage';
+import { exportPdf } from '@/lib/pdf';
+import { computeStats, rangeColor } from '@/lib/stats';
+import { getReadings, Reading } from '@/lib/storage';
 
 export default function SummaryScreen() {
   const [readings, setReadings] = useState<Reading[]>([]);
