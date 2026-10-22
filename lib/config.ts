@@ -1,0 +1,1 @@
+export const SERVER = 'https://glucosebridge-server.onrender.com/';
