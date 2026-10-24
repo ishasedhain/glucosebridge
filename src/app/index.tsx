@@ -1,4 +1,5 @@
 import AboutModal from '@/components/AboutModal';
+import LatestCard from '@/components/LatestCard';
 import ConsentModal from '@/components/ConsentModal';
 import { scanMeter, wakeServer } from '@/lib/scan';
 import {
@@ -153,6 +154,8 @@ export default function HomeScreen() {
           load();
         }}
       />
+
+      <LatestCard readings={readings} />
 
       <Text style={styles.title} accessibilityRole="header">
         {editingId ? 'Edit Reading' : 'Add Reading'}

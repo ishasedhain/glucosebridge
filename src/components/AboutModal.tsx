@@ -59,7 +59,7 @@ export default function AboutModal({ visible, onClose, onDeleted }: Props) {
         <Text style={styles.body}>
           Readings are stored only on this phone. There are no accounts, no ads, and no
           tracking. Deleting the app or tapping the button below erases your readings.
-          The PDF summary is only shared when you choose to share it.
+          Your PDF summary and family messages are only shared when you choose to send them.
         </Text>
 
         <Text style={styles.heading}>Scanning your meter</Text>
@@ -76,7 +76,7 @@ export default function AboutModal({ visible, onClose, onDeleted }: Props) {
         </Text>
 
         <Text style={styles.heading}>Contact</Text>
-        <Text style={styles.body}>Questions or feedback: ishasedan@gmail.com</Text>
+        <Text style={styles.body}>Questions or feedback: CORRECT_EMAIL</Text>
 
         <TouchableOpacity
           style={styles.delete}
