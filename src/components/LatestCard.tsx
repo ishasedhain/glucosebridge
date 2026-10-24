@@ -12,7 +12,7 @@ export default function LatestCard({ readings }: Props) {
       <View style={[styles.card, { borderColor: '#555', backgroundColor: '#f3f4f6' }]}>
         <Text style={styles.small}>Your latest reading</Text>
         <Text style={styles.plain}>
-          No readings yet. Tap Scan Meter, or type your number below.
+          No readings yet. Go to the Add tab to scan your meter or type a number.
         </Text>
       </View>
     );
