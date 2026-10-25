@@ -125,7 +125,7 @@ export default function HistoryScreen() {
 
 const styles = StyleSheet.create({
   container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
-  title: { textAlign: 'center', fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 12, color: '#25365d' },
+  title: { textAlign: 'center', fontSize: 28, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 12, color: '#25365d' },
   hint: { fontSize: 18, color: '#3b4a6b', marginBottom: 12 },
   empty: { fontSize: 22, color: '#25365d', marginTop: 12, lineHeight: 30 },
   panel: { borderWidth: 3, borderColor: '#6386ad', borderRadius: 14, padding: 16, marginBottom: 20, backgroundColor: '#dbe6f3' },

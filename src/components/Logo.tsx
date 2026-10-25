@@ -1,20 +1,18 @@
-import { View, Text, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { Image, StyleSheet } from 'react-native';
 
-// A simple drawn version of the Glucose Bridge logo.
+// The full Glucose Bridge logo (icon and name), sized to the screen width.
 export default function Logo() {
   return (
-    <View style={styles.row} accessibilityRole="image" accessibilityLabel="Glucose Bridge">
-      <View style={styles.box}>
-        <Ionicons name="water" size={30} color="#ffffff" />
-      </View>
-      <Text style={styles.name}>Glucose Bridge</Text>
-    </View>
+    <Image
+      source={require('../../assets/images/gb-logo.png')}
+      style={styles.logo}
+      resizeMode="contain"
+      accessibilityRole="image"
+      accessibilityLabel="Glucose Bridge"
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  row: { alignSelf: 'center', flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
-  box: { width: 56, height: 56, borderRadius: 14, backgroundColor: '#6386ad', borderWidth: 4, borderColor: '#81a4cd', alignItems: 'center', justifyContent: 'center' },
-  name: { fontSize: 30, fontWeight: 'bold', color: '#25365d', marginLeft: 12, fontFamily: 'Georgia' },
+  logo: { width: '100%', maxWidth: 380, aspectRatio: 1490 / 338, alignSelf: 'center', marginBottom: 12 },
 });
