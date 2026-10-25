@@ -14,7 +14,7 @@ export default function Logo() {
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
+  row: { alignSelf: 'center', flexDirection: 'row', alignItems: 'center', marginBottom: 16 },
   box: { width: 56, height: 56, borderRadius: 14, backgroundColor: '#6386ad', borderWidth: 4, borderColor: '#81a4cd', alignItems: 'center', justifyContent: 'center' },
   name: { fontSize: 30, fontWeight: 'bold', color: '#25365d', marginLeft: 12, fontFamily: 'Georgia' },
 });

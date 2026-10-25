@@ -134,7 +134,7 @@ export default function AddScreen() {
 
 const styles = StyleSheet.create({
   container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
-  title: { fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 16, color: '#25365d' },
+  title: { textAlign: 'center', fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 16, color: '#25365d' },
   hint: { fontSize: 18, color: '#3b4a6b', marginBottom: 12 },
   wait: { fontSize: 20, color: '#92400e', marginBottom: 8 },
   scan: { backgroundColor: '#6386ad', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginBottom: 8, alignItems: 'center' },

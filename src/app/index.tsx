@@ -72,7 +72,7 @@ export default function TodayScreen() {
 
 const styles = StyleSheet.create({
   container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
-  title: { fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 16, color: '#25365d' },
+  title: { textAlign: 'center', fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 16, color: '#25365d' },
   help: { borderWidth: 3, borderColor: '#6386ad', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 14 },
   helpText: { color: '#6386ad', fontSize: 24, fontWeight: 'bold' },
   add: { backgroundColor: '#6da67a', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', alignItems: 'center' },

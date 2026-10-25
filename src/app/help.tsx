@@ -140,7 +140,7 @@ import { View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
-  title: { fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', color: '#25365d', marginBottom: 8 },
+  title: { textAlign: 'center', fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', color: '#25365d', marginBottom: 8 },
   sub: { fontSize: 24, fontWeight: 'bold', color: '#25365d', marginTop: 20, marginBottom: 8 },
   hint: { fontSize: 18, color: '#3b4a6b', marginBottom: 10 },
   quick: { borderWidth: 3, borderColor: '#6386ad', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', marginBottom: 10 },
