@@ -41,6 +41,7 @@ export default function AppTabs() {
           tabBarIcon: ({ color }) => <Ionicons name="stats-chart" size={28} color={color} />,
         }}
       />
+      <Tabs.Screen name="help" options={{ href: null }} />
     </Tabs>
   );
 }

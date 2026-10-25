@@ -44,6 +44,15 @@ export default function TodayScreen() {
         <Text style={styles.addText}>Add a reading</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        style={styles.help}
+        onPress={() => router.navigate('/help')}
+        accessibilityRole="button"
+        accessibilityLabel="Need help? Ask a question"
+      >
+        <Text style={styles.helpText}>Need help? Ask a question</Text>
+      </TouchableOpacity>
+
       <Text style={styles.disclaimer}>
         GlucoseBridge is a logging tool, not medical advice.
       </Text>
@@ -62,6 +71,8 @@ export default function TodayScreen() {
 const styles = StyleSheet.create({
   container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
   title: { fontSize: 34, fontWeight: 'bold', marginBottom: 16, color: '#111' },
+  help: { borderWidth: 3, borderColor: '#1a56db', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 14 },
+  helpText: { color: '#1a56db', fontSize: 24, fontWeight: 'bold' },
   add: { backgroundColor: '#0a7d3b', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', alignItems: 'center' },
   addText: { color: '#fff', fontSize: 26, fontWeight: 'bold' },
   disclaimer: { fontSize: 18, color: '#444', marginTop: 32, textAlign: 'center' },
