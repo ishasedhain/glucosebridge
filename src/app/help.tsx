@@ -96,13 +96,13 @@ export default function HelpScreen() {
 
       <Text style={styles.sub}>Or ask your own question</Text>
       <Text style={styles.hint}>
-        Tap the microphone on your keyboard to speak. Please do not include your name or other personal details.
+        Type your question below. Please do not include your name or other personal details.
       </Text>
       <TextInput
         style={styles.input}
         value={question}
         onChangeText={setQuestion}
-        placeholder="Type or speak your question"
+        placeholder="Type your question here"
         placeholderTextColor="#666666"
         multiline
         accessibilityLabel="Your question"
