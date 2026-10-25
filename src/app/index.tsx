@@ -56,7 +56,7 @@ export default function TodayScreen() {
       </TouchableOpacity>
 
       <Text style={styles.disclaimer}>
-        GlucoseBridge is a logging tool, not medical advice.
+        Glucose Bridge is a logging tool, not medical advice.
       </Text>
       <TouchableOpacity
         style={styles.about}

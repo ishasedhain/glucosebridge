@@ -23,7 +23,7 @@ export default function ConsentModal() {
 
         <Text style={styles.heading}>What this app does</Text>
         <Text style={styles.body}>
-          GlucoseBridge helps you keep a log of your blood sugar readings and make a
+          Glucose Bridge helps you keep a log of your blood sugar readings and make a
           one-page summary to share with your doctor.
         </Text>
 

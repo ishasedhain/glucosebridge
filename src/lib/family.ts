@@ -12,7 +12,7 @@ export function familyMessage(readingsNewestFirst: Reading[]): string {
   const when = new Date(latest.time).toLocaleString();
 
   const lines = [
-    'Blood sugar update from GlucoseBridge',
+    'Blood sugar update from Glucose Bridge',
     '',
     `Latest reading: ${latest.value} mg/dL (${latest.tag})`,
     `When: ${when}`,

@@ -42,7 +42,7 @@ export default function AboutModal({ visible, onClose, onDeleted }: Props) {
 
         <Text style={styles.title}>Privacy & About</Text>
 
-        <Text style={styles.heading}>What GlucoseBridge is</Text>
+        <Text style={styles.heading}>What Glucose Bridge is</Text>
         <Text style={styles.body}>
           A simple log for fingerstick blood sugar readings. You can scan your meter or type
           the number, then share a one-page summary with your doctor.
@@ -50,7 +50,7 @@ export default function AboutModal({ visible, onClose, onDeleted }: Props) {
 
         <Text style={styles.heading}>Not medical advice</Text>
         <Text style={styles.body}>
-          GlucoseBridge is a logging tool, not a medical device. It does not diagnose,
+          Glucose Bridge is a logging tool, not a medical device. It does not diagnose,
           treat, or give advice. Always check each reading against your meter and follow
           your doctor's guidance.
         </Text>
