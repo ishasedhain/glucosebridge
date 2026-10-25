@@ -88,7 +88,7 @@ export default function SummaryScreen() {
         accessibilityLabel={`Time in range: ${stats.pctLow} percent low, ${stats.pctInRange} percent in range, ${stats.pctHigh} percent high`}
       >
         <View style={{ flex: stats.pctLow || 0.001, backgroundColor: '#d97706' }} />
-        <View style={{ flex: stats.pctInRange || 0.001, backgroundColor: '#25365d' }} />
+        <View style={{ flex: stats.pctInRange || 0.001, backgroundColor: '#6da67a' }} />
         <View style={{ flex: stats.pctHigh || 0.001, backgroundColor: '#e48a8a' }} />
       </View>
       <Text style={styles.legend}>
@@ -133,7 +133,7 @@ export default function SummaryScreen() {
         accessibilityRole="button"
         accessibilityLabel="Share one page summary as a PDF for your doctor"
       >
-        <Text style={styles.btnText}>Share one-page summary (PDF)</Text>
+        <Text style={styles.btnTextDark}>Share one-page summary (PDF)</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -153,6 +153,6 @@ const styles = StyleSheet.create({
   insight: { fontSize: 21, marginBottom: 8, color: '#25365d', lineHeight: 28 },
   chart: { flexDirection: 'row', alignItems: 'flex-end', height: 180, borderBottomWidth: 2, borderColor: '#25365d' },
   hear: { backgroundColor: '#6386ad', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', marginBottom: 16, alignItems: 'center' },
-  pdf: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 32, marginBottom: 40, alignItems: 'center' },
+  pdf: { backgroundColor: '#6da67a', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 32, marginBottom: 40, alignItems: 'center' },
   btnText: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
 });

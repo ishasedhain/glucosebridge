@@ -28,5 +28,5 @@ export function computeStats(readings: Reading[], low = 70, high = 180) {
 export function rangeColor(value: number, low = 70, high = 180) {
   if (value < low) return '#d97706';
   if (value > high) return '#e48a8a';
-  return '#25365d';
+  return '#6da67a';
 }

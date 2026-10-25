@@ -126,7 +126,7 @@ export default function AddScreen() {
         accessibilityRole="button"
         accessibilityLabel="Save reading"
       >
-        <Text style={styles.btnText}>Save</Text>
+        <Text style={styles.btnTextDark}>Save</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -144,6 +144,6 @@ const styles = StyleSheet.create({
   tagOn: { backgroundColor: '#6386ad', borderColor: '#6386ad' },
   tagText: { fontSize: 22, color: '#25365d' },
   tagTextOn: { color: '#fff', fontWeight: 'bold' },
-  save: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 16, marginBottom: 40, alignItems: 'center' },
+  save: { backgroundColor: '#6da67a', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 16, marginBottom: 40, alignItems: 'center' },
   btnText: { color: '#fff', fontSize: 26, fontWeight: 'bold' },
 });

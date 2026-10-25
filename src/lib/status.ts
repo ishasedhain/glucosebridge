@@ -19,8 +19,8 @@ export function statusFor(value: number, low = 70, high = 180) {
   }
   return {
     label: 'In the standard range',
-    color: '#25365d',
-    bg: '#dbe6f3',
+    color: '#6da67a',
+    bg: '#e3f1e6',
     note: `Standard range: ${low} to ${high} mg/dL. Ask your doctor for yours.`,
   };
 }

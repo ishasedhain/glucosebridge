@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
   title: { fontSize: 34, fontWeight: 'bold', color: '#25365d', marginBottom: 12 },
   heading: { fontSize: 22, fontWeight: 'bold', color: '#25365d', marginTop: 20 },
   body: { fontSize: 19, color: '#25365d', marginTop: 6, lineHeight: 27 },
-  button: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, marginTop: 32, marginBottom: 40, alignItems: 'center' },
-  buttonText: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
+  button: { backgroundColor: '#6da67a', borderRadius: 12, padding: 20, marginTop: 32, marginBottom: 40, alignItems: 'center' },
+  buttonText: { color: '#25365d', fontSize: 24, fontWeight: 'bold' },
 });

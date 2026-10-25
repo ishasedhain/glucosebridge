@@ -89,7 +89,7 @@ export default function HistoryScreen() {
             ))}
           </View>
           <TouchableOpacity style={styles.save} onPress={save} accessibilityRole="button" accessibilityLabel="Update reading">
-            <Text style={styles.btnText}>Update Reading</Text>
+            <Text style={styles.btnTextDark}>Update Reading</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.cancel} onPress={() => setEditingId(null)} accessibilityRole="button" accessibilityLabel="Cancel editing">
             <Text style={styles.cancelText}>Cancel</Text>
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   tagOn: { backgroundColor: '#6386ad', borderColor: '#6386ad' },
   tagText: { fontSize: 20, color: '#25365d' },
   tagTextOn: { color: '#fff', fontWeight: 'bold' },
-  save: { backgroundColor: '#25365d', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', marginTop: 10, alignItems: 'center' },
+  save: { backgroundColor: '#6da67a', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', marginTop: 10, alignItems: 'center' },
   cancel: { borderWidth: 3, borderColor: '#25365d', borderRadius: 12, padding: 16, minHeight: 60, justifyContent: 'center', marginTop: 10, alignItems: 'center', backgroundColor: '#ebf1f8' },
   cancelText: { color: '#25365d', fontSize: 22, fontWeight: 'bold' },
   del: { backgroundColor: '#b91c1c', borderRadius: 12, padding: 16, minHeight: 60, justifyContent: 'center', marginTop: 10, alignItems: 'center' },
