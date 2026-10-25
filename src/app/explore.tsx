@@ -88,8 +88,8 @@ export default function SummaryScreen() {
         accessibilityLabel={`Time in range: ${stats.pctLow} percent low, ${stats.pctInRange} percent in range, ${stats.pctHigh} percent high`}
       >
         <View style={{ flex: stats.pctLow || 0.001, backgroundColor: '#d97706' }} />
-        <View style={{ flex: stats.pctInRange || 0.001, backgroundColor: '#0a7d3b' }} />
-        <View style={{ flex: stats.pctHigh || 0.001, backgroundColor: '#dc2626' }} />
+        <View style={{ flex: stats.pctInRange || 0.001, backgroundColor: '#25365d' }} />
+        <View style={{ flex: stats.pctHigh || 0.001, backgroundColor: '#e48a8a' }} />
       </View>
       <Text style={styles.legend}>
         Low {stats.pctLow}% · In range {stats.pctInRange}% · High {stats.pctHigh}%
@@ -140,19 +140,19 @@ export default function SummaryScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' },
-  big: { fontSize: 30, fontWeight: 'bold', color: '#111' },
-  sub2: { fontSize: 22, color: '#333', marginTop: 8 },
-  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 12, color: '#111' },
-  stat: { fontSize: 24, marginBottom: 8, color: '#111' },
-  sub: { fontSize: 26, fontWeight: 'bold', marginTop: 28, marginBottom: 8, color: '#111' },
+  container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ebf1f8' },
+  big: { fontSize: 30, fontWeight: 'bold', color: '#25365d' },
+  sub2: { fontSize: 22, color: '#25365d', marginTop: 8 },
+  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 12, color: '#25365d' },
+  stat: { fontSize: 24, marginBottom: 8, color: '#25365d' },
+  sub: { fontSize: 26, fontWeight: 'bold', marginTop: 28, marginBottom: 8, color: '#25365d' },
   bar: { flexDirection: 'row', height: 40, borderRadius: 8, overflow: 'hidden' },
-  legend: { fontSize: 20, marginTop: 8, color: '#111' },
-  note: { fontSize: 18, marginTop: 6, color: '#444' },
-  insight: { fontSize: 21, marginBottom: 8, color: '#111', lineHeight: 28 },
-  chart: { flexDirection: 'row', alignItems: 'flex-end', height: 180, borderBottomWidth: 2, borderColor: '#111' },
-  hear: { backgroundColor: '#1a56db', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', marginBottom: 16, alignItems: 'center' },
-  pdf: { backgroundColor: '#0a7d3b', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 32, marginBottom: 40, alignItems: 'center' },
+  legend: { fontSize: 20, marginTop: 8, color: '#25365d' },
+  note: { fontSize: 18, marginTop: 6, color: '#3b4a6b' },
+  insight: { fontSize: 21, marginBottom: 8, color: '#25365d', lineHeight: 28 },
+  chart: { flexDirection: 'row', alignItems: 'flex-end', height: 180, borderBottomWidth: 2, borderColor: '#25365d' },
+  hear: { backgroundColor: '#6386ad', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', marginBottom: 16, alignItems: 'center' },
+  pdf: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 32, marginBottom: 40, alignItems: 'center' },
   btnText: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
 });

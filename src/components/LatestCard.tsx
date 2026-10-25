@@ -9,7 +9,7 @@ type Props = { readings: Reading[] }; // newest first
 export default function LatestCard({ readings }: Props) {
   if (readings.length === 0) {
     return (
-      <View style={[styles.card, { borderColor: '#555', backgroundColor: '#f3f4f6' }]}>
+      <View style={[styles.card, { borderColor: '#3b4a6b', backgroundColor: '#dbe6f3' }]}>
         <Text style={styles.small}>Your latest reading</Text>
         <Text style={styles.plain}>
           No readings yet. Go to the Add tab to scan your meter or type a number.
@@ -60,12 +60,12 @@ export default function LatestCard({ readings }: Props) {
 
 const styles = StyleSheet.create({
   card: { borderWidth: 3, borderLeftWidth: 12, borderRadius: 14, padding: 18, marginBottom: 20 },
-  small: { fontSize: 20, color: '#111', fontWeight: 'bold' },
-  big: { fontSize: 56, fontWeight: 'bold', color: '#111', marginTop: 4 },
+  small: { fontSize: 20, color: '#25365d', fontWeight: 'bold' },
+  big: { fontSize: 56, fontWeight: 'bold', color: '#25365d', marginTop: 4 },
   unit: { fontSize: 24, fontWeight: 'normal' },
-  label: { fontSize: 26, fontWeight: 'bold', color: '#111', marginTop: 4 },
-  plain: { fontSize: 20, color: '#111', marginTop: 6, lineHeight: 28 },
-  when: { fontSize: 18, color: '#333', marginTop: 8 },
-  share: { backgroundColor: '#1a56db', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 16 },
+  label: { fontSize: 26, fontWeight: 'bold', color: '#25365d', marginTop: 4 },
+  plain: { fontSize: 20, color: '#25365d', marginTop: 6, lineHeight: 28 },
+  when: { fontSize: 18, color: '#25365d', marginTop: 8 },
+  share: { backgroundColor: '#6386ad', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 16 },
   shareText: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
 });

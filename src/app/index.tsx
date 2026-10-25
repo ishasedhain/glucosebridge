@@ -6,6 +6,7 @@ import { wakeServer } from '@/lib/scan';
 import ConsentModal from '@/components/ConsentModal';
 import AboutModal from '@/components/AboutModal';
 import LatestCard from '@/components/LatestCard';
+import Logo from '@/components/Logo';
 
 // The first screen: shows the latest reading in plain words.
 export default function TodayScreen() {
@@ -31,6 +32,7 @@ export default function TodayScreen() {
         onDeleted={load}
       />
 
+      <Logo />
       <Text style={styles.title} accessibilityRole="header">Today</Text>
 
       <LatestCard readings={readings} />
@@ -69,13 +71,13 @@ export default function TodayScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
-  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 16, color: '#111' },
-  help: { borderWidth: 3, borderColor: '#1a56db', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 14 },
-  helpText: { color: '#1a56db', fontSize: 24, fontWeight: 'bold' },
-  add: { backgroundColor: '#0a7d3b', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', alignItems: 'center' },
+  container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
+  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 16, color: '#25365d' },
+  help: { borderWidth: 3, borderColor: '#6386ad', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 14 },
+  helpText: { color: '#6386ad', fontSize: 24, fontWeight: 'bold' },
+  add: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', alignItems: 'center' },
   addText: { color: '#fff', fontSize: 26, fontWeight: 'bold' },
-  disclaimer: { fontSize: 18, color: '#444', marginTop: 32, textAlign: 'center' },
-  about: { borderWidth: 3, borderColor: '#111', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', marginTop: 12, marginBottom: 40, alignItems: 'center' },
-  aboutText: { color: '#111', fontSize: 22, fontWeight: 'bold' },
+  disclaimer: { fontSize: 18, color: '#3b4a6b', marginTop: 32, textAlign: 'center' },
+  about: { borderWidth: 3, borderColor: '#25365d', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', marginTop: 12, marginBottom: 40, alignItems: 'center' },
+  aboutText: { color: '#25365d', fontSize: 22, fontWeight: 'bold' },
 });

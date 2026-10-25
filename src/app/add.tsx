@@ -133,17 +133,17 @@ export default function AddScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
-  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 16, color: '#111' },
-  hint: { fontSize: 18, color: '#444', marginBottom: 12 },
+  container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
+  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 16, color: '#25365d' },
+  hint: { fontSize: 18, color: '#3b4a6b', marginBottom: 12 },
   wait: { fontSize: 20, color: '#92400e', marginBottom: 8 },
-  scan: { backgroundColor: '#1a56db', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginBottom: 8, alignItems: 'center' },
-  input: { fontSize: 38, borderWidth: 3, borderColor: '#111', borderRadius: 12, padding: 16, color: '#111' },
+  scan: { backgroundColor: '#6386ad', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginBottom: 8, alignItems: 'center' },
+  input: { fontSize: 38, borderWidth: 3, borderColor: '#25365d', borderRadius: 12, padding: 16, color: '#25365d' },
   tags: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 16 },
-  tag: { borderWidth: 3, borderColor: '#111', borderRadius: 12, paddingHorizontal: 16, minHeight: 64, justifyContent: 'center', marginRight: 8, marginBottom: 8 },
-  tagOn: { backgroundColor: '#1a56db', borderColor: '#1a56db' },
-  tagText: { fontSize: 22, color: '#111' },
+  tag: { borderWidth: 3, borderColor: '#25365d', borderRadius: 12, paddingHorizontal: 16, minHeight: 64, justifyContent: 'center', marginRight: 8, marginBottom: 8 },
+  tagOn: { backgroundColor: '#6386ad', borderColor: '#6386ad' },
+  tagText: { fontSize: 22, color: '#25365d' },
   tagTextOn: { color: '#fff', fontWeight: 'bold' },
-  save: { backgroundColor: '#0a7d3b', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 16, marginBottom: 40, alignItems: 'center' },
+  save: { backgroundColor: '#25365d', borderRadius: 12, padding: 20, minHeight: 68, justifyContent: 'center', marginTop: 16, marginBottom: 40, alignItems: 'center' },
   btnText: { color: '#fff', fontSize: 26, fontWeight: 'bold' },
 });

@@ -95,13 +95,13 @@ export default function AboutModal({ visible, onClose, onDeleted }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
-  close: { fontSize: 22, color: '#1a56db', fontWeight: 'bold', marginBottom: 12 },
-  title: { fontSize: 34, fontWeight: 'bold', color: '#111', marginBottom: 8 },
-  heading: { fontSize: 22, fontWeight: 'bold', color: '#111', marginTop: 20 },
-  body: { fontSize: 19, color: '#222', marginTop: 6, lineHeight: 27 },
+  container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
+  close: { fontSize: 22, color: '#6386ad', fontWeight: 'bold', marginBottom: 12 },
+  title: { fontSize: 34, fontWeight: 'bold', color: '#25365d', marginBottom: 8 },
+  heading: { fontSize: 22, fontWeight: 'bold', color: '#25365d', marginTop: 20 },
+  body: { fontSize: 19, color: '#25365d', marginTop: 6, lineHeight: 27 },
   delete: { backgroundColor: '#b91c1c', borderRadius: 12, padding: 20, marginTop: 32, alignItems: 'center' },
   deleteText: { color: '#fff', fontSize: 22, fontWeight: 'bold' },
-  closeBtn: { borderWidth: 2, borderColor: '#333', borderRadius: 12, padding: 18, marginTop: 12, marginBottom: 40, alignItems: 'center' },
-  closeBtnText: { color: '#111', fontSize: 22, fontWeight: 'bold' },
+  closeBtn: { borderWidth: 2, borderColor: '#25365d', borderRadius: 12, padding: 18, marginTop: 12, marginBottom: 40, alignItems: 'center' },
+  closeBtnText: { color: '#25365d', fontSize: 22, fontWeight: 'bold' },
 });

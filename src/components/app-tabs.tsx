@@ -1,16 +1,22 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
-// The four tabs at the bottom of the app, with big labels for easy reading.
+// The four tabs at the bottom of the app (Help is reachable from the Today tab).
 export default function AppTabs() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: '#1a56db',
-        tabBarInactiveTintColor: '#444444',
+        tabBarActiveTintColor: '#25365d',
+        tabBarInactiveTintColor: '#4f648c',
+        tabBarActiveBackgroundColor: '#81a4cd',
         tabBarLabelStyle: { fontSize: 15, fontWeight: 'bold' },
-        tabBarStyle: { height: 90, paddingTop: 6 },
+        tabBarStyle: {
+          height: 90,
+          paddingTop: 6,
+          backgroundColor: '#ebf1f8',
+          borderTopColor: '#81a4cd',
+        },
       }}
     >
       <Tabs.Screen

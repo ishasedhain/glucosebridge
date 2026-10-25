@@ -12,15 +12,15 @@ export function statusFor(value: number, low = 70, high = 180) {
   if (value > high) {
     return {
       label: 'Above the standard range',
-      color: '#b91c1c',
-      bg: '#fee2e2',
+      color: '#e48a8a',
+      bg: '#fbe3e3',
       note: "Follow your doctor's guidance.",
     };
   }
   return {
     label: 'In the standard range',
-    color: '#0a7d3b',
-    bg: '#dcfce7',
+    color: '#25365d',
+    bg: '#dbe6f3',
     note: `Standard range: ${low} to ${high} mg/dL. Ask your doctor for yours.`,
   };
 }

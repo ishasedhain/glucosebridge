@@ -139,16 +139,16 @@ export default function HelpScreen() {
 import { View } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: { padding: 24, paddingTop: 64, backgroundColor: '#fff' },
-  title: { fontSize: 34, fontWeight: 'bold', color: '#111', marginBottom: 8 },
-  sub: { fontSize: 24, fontWeight: 'bold', color: '#111', marginTop: 20, marginBottom: 8 },
-  hint: { fontSize: 18, color: '#444', marginBottom: 10 },
-  quick: { borderWidth: 3, borderColor: '#1a56db', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', marginBottom: 10 },
-  quickText: { fontSize: 22, color: '#111', fontWeight: 'bold' },
-  input: { fontSize: 24, borderWidth: 3, borderColor: '#111', borderRadius: 12, padding: 14, minHeight: 110, color: '#111', textAlignVertical: 'top' },
-  ask: { backgroundColor: '#1a56db', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 12 },
+  container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
+  title: { fontSize: 34, fontWeight: 'bold', color: '#25365d', marginBottom: 8 },
+  sub: { fontSize: 24, fontWeight: 'bold', color: '#25365d', marginTop: 20, marginBottom: 8 },
+  hint: { fontSize: 18, color: '#3b4a6b', marginBottom: 10 },
+  quick: { borderWidth: 3, borderColor: '#6386ad', borderRadius: 12, padding: 16, minHeight: 64, justifyContent: 'center', marginBottom: 10 },
+  quickText: { fontSize: 22, color: '#25365d', fontWeight: 'bold' },
+  input: { fontSize: 24, borderWidth: 3, borderColor: '#25365d', borderRadius: 12, padding: 14, minHeight: 110, color: '#25365d', textAlignVertical: 'top' },
+  ask: { backgroundColor: '#6386ad', borderRadius: 12, padding: 18, minHeight: 64, justifyContent: 'center', alignItems: 'center', marginTop: 12 },
   stop: { backgroundColor: '#b91c1c', borderRadius: 12, padding: 16, minHeight: 60, justifyContent: 'center', alignItems: 'center', marginTop: 10 },
   askText: { color: '#fff', fontSize: 24, fontWeight: 'bold' },
-  answer: { fontSize: 24, color: '#111', lineHeight: 34, marginTop: 20, padding: 16, backgroundColor: '#eef2ff', borderRadius: 12 },
-  note: { fontSize: 18, color: '#444', marginTop: 24, lineHeight: 26 },
+  answer: { fontSize: 24, color: '#25365d', lineHeight: 34, marginTop: 20, padding: 16, backgroundColor: '#dbe6f3', borderRadius: 12 },
+  note: { fontSize: 18, color: '#3b4a6b', marginTop: 24, lineHeight: 26 },
 });
