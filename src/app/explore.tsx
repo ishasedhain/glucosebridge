@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ebf1f8' },
   big: { fontSize: 30, fontWeight: 'bold', color: '#25365d' },
   sub2: { fontSize: 22, color: '#25365d', marginTop: 8 },
-  title: { fontSize: 34, fontWeight: 'bold', marginBottom: 12, color: '#25365d' },
+  title: { fontSize: 40, fontWeight: 'bold', fontFamily: 'Georgia', marginBottom: 12, color: '#25365d' },
   stat: { fontSize: 24, marginBottom: 8, color: '#25365d' },
   sub: { fontSize: 26, fontWeight: 'bold', marginTop: 28, marginBottom: 8, color: '#25365d' },
   bar: { flexDirection: 'row', height: 40, borderRadius: 8, overflow: 'hidden' },
