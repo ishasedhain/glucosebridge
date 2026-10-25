@@ -50,9 +50,9 @@ export default function TodayScreen() {
         style={styles.help}
         onPress={() => router.navigate('/help')}
         accessibilityRole="button"
-        accessibilityLabel="Need help? Ask a question"
+        accessibilityLabel="Need help?"
       >
-        <Text style={styles.helpText}>Need help? Ask a question</Text>
+        <Text style={styles.helpText}>Need help?</Text>
       </TouchableOpacity>
 
       <Text style={styles.disclaimer}>

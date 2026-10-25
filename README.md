@@ -1,56 +1,64 @@
-# Welcome to your Expo app 👋
+# Glucose Bridge
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check their blood sugar with a fingerstick meter. They can scan or type a reading, see it in plain words, and turn their readings into a one-page PDF summary for their doctor. It is a logging tool, not medical advice.
 
-## Get started
+**Team:** Claire Park and Isha Sedhain
+**Challenge:** Congressional App Challenge 2026
 
-1. Install dependencies
+## What the app does
+- **Add:** scan the meter with the phone camera or type the number. A scanned number is never saved automatically; it goes into the box so the user confirms or fixes it first.
+- **Today:** latest reading in large text and plain words, plus "Send to family."
+- **History:** tap a reading to edit or delete it.
+- **Summary:** average, low, high, time in range, patterns, a 30-reading trend, "Hear my summary" (read aloud), and a one-page PDF for the doctor.
+- **Help:** a typed question box and quick-answer buttons about using the app.
+- **Privacy:** readings stay on the phone, there are no accounts, and "Delete all my data" is one tap.
 
-   ```bash
-   npm install
-   ```
+## How it is built
+- **App (this folder):** TypeScript, React Native, Expo, Expo Router. Readings are stored on the phone with AsyncStorage.
+- **Server (glucosebridge-server):** Python and FastAPI. It receives a meter photo, asks the Google Gemini API for only the number (or "not readable"), and returns it. It also answers Help questions. The API key is kept in an environment variable on the server and is not in this code.
 
-2. Start the app
+## Run it
+**App**
+1. npm install
+2. Set the server address in src/lib/config.ts
+3. npx expo start, then scan the QR code with Expo Go on a phone.
 
-   ```bash
-   npx expo start
-   ```
+**Server** (folder glucosebridge-server)
+1. python3 -m venv venv && source venv/bin/activate
+2. pip install -r requirements.txt
+3. Create a .env file containing GEMINI_API_KEY=your_key
+4. uvicorn main:app --host 0.0.0.0 --port 8000
 
-In the output, you'll find options to open the app in a
+Typing readings, history, summary, PDF, and delete-all work without the server. Only scanning and Help questions need it.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Open-source libraries and outside tools
+- **App:** Expo, React Native, React, Expo Router, TypeScript, AsyncStorage, expo-image-picker, expo-print, expo-sharing, expo-speech, Ionicons (@expo/vector-icons)
+- **Server:** Python, FastAPI, Uvicorn, python-dotenv, Pydantic, google-genai
+- **Services:** Google Gemini API (reads the meter photo and answers Help questions inside the app), GitHub, Render [FILL IN: only if you actually deployed there]
+- **Other:** Canva (demo video slides) [FILL IN: and your screen recorder / editor]
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## AI disclosure
+**AI used inside the app:** the server sends meter photos and Help questions to Google's Gemini model. The user confirms every scanned number before it is saved.
 
-## Get a fresh project
+**AI used to build the app:** we used Claude, an AI assistant made by Anthropic, to help write, debug, and explain code, including most files in this project. SPEC.md is the project plan and rules we gave the assistant.
 
-When you're ready, run:
+**What we did ourselves:** [FILL IN, truthfully, in your own words: the idea, who it is for, features and rules you chose, design and logo, testing on a real phone with real meter photos, and any files you wrote or edited and can explain.]
 
-```bash
-npm run reset-project
-```
+## Credits
+- Logo and color palette: [FILL IN who made them and with what tool]
+- Statistics on the video slides: CDC National Diabetes Statistics Report; Texas Diabetes Council 2025 report
+- Glucose Bridge is a logging tool and makes no medical, accuracy, or diagnostic claims.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Submission answers
 
-### Other setup steps
+**1. Title:** Glucose Bridge
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+**2. Purpose:** Glucose Bridge lets people scan or type their blood sugar readings and turn them into a one-page summary they can share with their doctor.
 
-## Learn more
+**3. What inspired us:** We know people with diabetes, and in our community we often saw older Asian adults who did not know how to collect their blood sugar readings, store them, or show them to their doctors. Many still rely on paper notebooks or memory. We wanted to build something simple and in plain words that helps our community keep their readings in one place and bring them to their doctor.
 
-To learn more about developing your project with Expo, look at the following resources:
+**4. Technical challenge:** Reading a blood sugar meter from a photo was the hardest part, because of glare, small digits, and because a wrong number could mislead someone. The app sends the photo to a server that asks a vision model (Google Gemini) for only a number, or "not readable." The server also rejects values outside a realistic range. The app never saves a scanned number automatically: it puts the number in a box so the user confirms or fixes it, and if a photo cannot be read, the app asks the user to try again or type the number. We keep the API key on the server so it is never inside the app. We used Claude, an AI assistant, to help write and debug code. We came up with the idea, rules, and design, and tested the app on our own phones.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**5. Biggest takeaway:** Designing for older adults means fewer choices, bigger text, plain words, and never trusting an AI reading without a human check. A good app is not the one with the most features, it is the one someone can use without help.
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**6. If we made a 2.0 version:** We would let doctors set target ranges instead of using one fixed range, make the app installable directly instead of through Expo Go, add caregiver sharing with the user's consent, offer optional backup, and test it with more older adults.
