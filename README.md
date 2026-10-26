@@ -1,14 +1,14 @@
 # Glucose Bridge
 
-Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check their blood sugar with a fingerstick meter. They can type a reading (or scan the meter), see it in plain words, get daily reminders to check, and turn their readings into a one-page PDF summary for their doctor. It is a logging tool, not medical advice.
+Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check their blood sugar with a fingerstick meter. They can type a reading, see it in plain words, get daily reminders to check, and turn their readings into a one-page PDF summary for their doctor. It is a logging tool, not medical advice.
 
 **Team:** Claire Park and Isha Sedhain
 **Challenge:** Congressional App Challenge 2026
 
 ## What the app does
 - **Today:** latest reading in large text and plain words, daily reminders, and "Send to family."
-- **Add:** type the number, or scan the meter with the phone camera. A scanned number is never saved automatically; it goes into the box so the user confirms or fixes it first.
-- **Daily reminders:** the user picks morning, midday, evening, or bedtime, and the phone reminds them to check and log. Reminders are scheduled on the phone itself and need no server or account.
+- **Add:** type the number. We are also working on a feature that scans the meter with the phone camera and logs the reading for you. It is still a work in progress. A scanned number is never saved until the user confirms or fixes it.
+- **Daily reminders:** the user picks quick times (morning, midday, evening, bedtime) or sets their own times, and the phone reminds them to check and log. Reminders are scheduled on the phone itself and need no server or account.
 - **History:** tap a reading to edit or delete it.
 - **Summary:** average, low, high, time in range, patterns, a 30-reading trend, "Hear my summary" (read aloud), and a one-page PDF for the doctor.
 - **Help:** a typed question box and quick-answer buttons about using the app.
@@ -54,11 +54,11 @@ Typing readings, reminders, history, summary, PDF, and delete-all work without t
 
 **1. Title:** Glucose Bridge
 
-**2. Purpose:** Glucose Bridge helps older adults log their blood sugar in plain words, get reminders to check, and turn their readings into a one-page summary they can share with their doctor.
+**2. Purpose:** Glucose Bridge helps older adults log their blood sugar in plain words, set their own reminders to check, and turn their readings into a one-page summary they can share with their doctor.
 
 **3. What inspired us:** We know people with diabetes, and in our community we often saw older Asian adults who did not know how to collect their blood sugar readings, store them, or show them to their doctors. Many still rely on paper notebooks or memory. We wanted to build something simple and in plain words that helps our community keep their readings in one place and bring them to their doctor.
 
-**4. Technical challenge:** The hardest part was making an app that is safe and simple for older adults. We built an optional meter scan: the app sends the photo to a server that asks a vision model (Google Gemini) for only a number, or "not readable," and the server rejects values outside a realistic range. A scanned number is never saved automatically; it goes into a box so the user confirms or fixes it, and typing always works. Connecting the phone to our server also taught us a lot about networking, so everything else in the app works fully on the phone with no server: readings, reminders, summary, and PDF. We keep the API key on the server so it is never inside the app. We used Claude, an AI assistant, to help write and debug code. We came up with the idea, rules, and design, and tested the app on our own phones.
+**4. Technical challenge:** The hardest part was making an app that is simple and safe for older adults: big text, plain words, and nothing saved without the person checking it. We are currently working on a feature that lets you scan your meter and log the reading automatically, but it is still a work in progress. The app sends the photo to a server that asks a vision model (Google Gemini) for only a number, or "not readable," and the server rejects values outside a realistic range. The scanned number goes into a box so the user confirms or fixes it, and typing always works. Connecting the phone to our server taught us a lot about networking, so the rest of the app works fully on the phone with no server: readings, custom reminders, summary, and PDF. We keep the API key on the server so it is never inside the app. We used Claude, an AI assistant, to help write and debug code. We came up with the idea, rules, and design, and tested the app on our own phones.
 
 **5. Biggest takeaway:** Designing for older adults means fewer choices, bigger text, plain words, and never trusting an AI reading without a human check. A good app is not the one with the most features, it is the one someone can use without help.
 
