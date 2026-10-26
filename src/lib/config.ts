@@ -1,1 +1,1 @@
-export const SERVER = 'http://192.168.4.113:8000';
+export const SERVER = 'https://879955add5d183.lhr.life';

@@ -23,7 +23,7 @@ export async function scanMeter(): Promise<number | null> {
 
   const result = await ImagePicker.launchCameraAsync({
     base64: true,
-    quality: 0.5,
+    quality: 0.2,
   });
   if (result.canceled) return null;
 

@@ -6,6 +6,7 @@ import { wakeServer } from '@/lib/scan';
 import ConsentModal from '@/components/ConsentModal';
 import AboutModal from '@/components/AboutModal';
 import LatestCard from '@/components/LatestCard';
+import Reminders from '@/components/Reminders';
 import Logo from '@/components/Logo';
 
 // The first screen: shows the latest reading in plain words.
@@ -36,6 +37,7 @@ export default function TodayScreen() {
       <Text style={styles.title} accessibilityRole="header">Today</Text>
 
       <LatestCard readings={readings} />
+      <Reminders />
 
       <TouchableOpacity
         style={styles.add}

@@ -140,6 +140,7 @@ export default function SummaryScreen() {
 }
 
 const styles = StyleSheet.create({
+  btnTextDark: { color: '#25365d', fontSize: 24, fontWeight: 'bold' },
   container: { padding: 24, paddingTop: 64, backgroundColor: '#ebf1f8' },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ebf1f8' },
   big: { fontSize: 30, fontWeight: 'bold', color: '#25365d' },
