@@ -76,6 +76,7 @@ export default function AddScreen() {
     <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
       <Text style={styles.title} accessibilityRole="header">Add Reading</Text>
 
+      {/* Scan Meter is planned for version 2.0. Code kept in src/lib/scan.ts.
       <TouchableOpacity
         style={styles.scan}
         onPress={scan}
@@ -93,6 +94,7 @@ export default function AddScreen() {
         </Text>
       )}
       <Text style={styles.hint}>Scanning needs internet. You can always type the number.</Text>
+      */}
 
       <TextInput
         style={styles.input}

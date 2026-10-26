@@ -1,7 +1,7 @@
 # Glucose Bridge: Project Spec
 
 ## What it is
-A mobile app for people who still check blood sugar with fingerstick meters and write readings in notebooks. The user types a reading (or scans the meter with the phone camera), sees it in plain words, gets daily reminders to check, and generates a one-page PDF summary a doctor can read in seconds. Built for the Congressional App Challenge (submission deadline Oct 26, 2026).
+A mobile app for people who still check blood sugar with fingerstick meters and write readings in notebooks. The user types a reading, sees it in plain words, gets daily reminders to check, and generates a one-page PDF summary a doctor can read in seconds. Built for the Congressional App Challenge (submission deadline Oct 26, 2026).
 
 ## Users
 Mainly older adults with Type 2 diabetes. Accessibility is the top design goal: large text, high contrast, one main action per screen, no hidden menus.
@@ -22,7 +22,7 @@ Mainly older adults with Type 2 diabetes. Accessibility is the top design goal: 
 - First-launch consent, Privacy and About, medical disclaimer
 - Accessibility pass: labels on every button, large text, high contrast
 - Error handling for no internet, slow server, camera denied, unreadable photo (always falls back to typing)
-- Optional meter scan through the server
+- Planned for 2.0: meter scan with the phone camera (early server code exists, not turned on in the app)
 
 ## Rules
 - A scanned number must NEVER be saved automatically. It goes into the input box so the user confirms or corrects it first.

@@ -7,7 +7,7 @@ Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check t
 
 ## What the app does
 - **Today:** latest reading in large text and plain words, daily reminders, and "Send to family."
-- **Add:** type the number. We are also working on a feature that scans the meter with the phone camera and logs the reading for you. It is still a work in progress. A scanned number is never saved until the user confirms or fixes it.
+- **Add:** type the number, pick a tag (fasting, before meal, after meal, exercise), and save.
 - **Daily reminders:** the user picks quick times (morning, midday, evening, bedtime) or sets their own times, and the phone reminds them to check and log. Reminders are scheduled on the phone itself and need no server or account.
 - **History:** tap a reading to edit or delete it.
 - **Summary:** average, low, high, time in range, patterns, a 30-reading trend, "Hear my summary" (read aloud), and a one-page PDF for the doctor.
@@ -16,7 +16,7 @@ Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check t
 
 ## How it is built
 - **App (this folder):** TypeScript, React Native, Expo, Expo Router. Readings are stored on the phone with AsyncStorage. Reminders use local notifications (expo-notifications).
-- **Server (glucosebridge-server):** Python and FastAPI. It receives a meter photo, asks the Google Gemini API for only the number (or "not readable"), and returns it. It also answers Help questions. The API key is kept in an environment variable on the server and is not in this code.
+- **Server (glucosebridge-server):** Python and FastAPI. It answers typed Help questions using the Google Gemini API. The API key is kept in an environment variable on the server and is not in this code. The server also has an early meter-photo reader that we are building for version 2.0; it is not turned on in the app.
 
 ## Run it
 **App**
@@ -30,16 +30,16 @@ Glucose Bridge is a mobile app for older adults with Type 2 diabetes who check t
 3. Create a .env file containing GEMINI_API_KEY=your_key
 4. uvicorn main:app --host 0.0.0.0 --port 8000
 
-Typing readings, reminders, history, summary, PDF, and delete-all work without the server. Only scanning and Help questions need it, and the server runs on our own computer, so it may be offline when you read this. Typing a number always works.
+Typing readings, reminders, history, summary, PDF, and delete-all all work without the server. Only typed Help questions need it, and the server runs on our own computer, so it may be offline when you read this. The Help quick-answer buttons work offline.
 
 ## Open-source libraries and outside tools
-- **App:** Expo, React Native, React, Expo Router, TypeScript, AsyncStorage, expo-image-picker, expo-notifications, expo-print, expo-sharing, expo-speech, Ionicons (@expo/vector-icons)
+- **App:** Expo, React Native, React, Expo Router, TypeScript, AsyncStorage, expo-notifications, expo-print, expo-sharing, expo-speech, Ionicons (@expo/vector-icons)
 - **Server:** Python, FastAPI, Uvicorn, python-dotenv, Pydantic, google-genai
 - **Services:** Google Gemini API (reads the meter photo and answers Help questions inside the app), GitHub
 - **Other:** Canva (demo video slides), Apple's built-in screen recorder
 
 ## AI disclosure
-**AI used inside the app:** the server sends meter photos and Help questions to Google's Gemini model. The user confirms every scanned number before it is saved.
+**AI used inside the app:** the server sends typed Help questions to Google's Gemini model. It only answers questions about using the app and never gives medical advice.
 
 **AI used to build the app:** we used Claude, an AI assistant made by Anthropic, to help write, debug, and explain code, including most files in this project. SPEC.md is the project plan and rules we gave the assistant.
 
@@ -58,8 +58,8 @@ Typing readings, reminders, history, summary, PDF, and delete-all work without t
 
 **3. What inspired us:** We know people with diabetes, and in our community we often saw older Asian adults who did not know how to collect their blood sugar readings, store them, or show them to their doctors. Many still rely on paper notebooks or memory. We wanted to build something simple and in plain words that helps our community keep their readings in one place and bring them to their doctor.
 
-**4. Technical challenge:** The hardest part was making an app that is simple and safe for older adults: big text, plain words, and nothing saved without the person checking it. We are currently working on a feature that lets you scan your meter and log the reading automatically, but it is still a work in progress. The app sends the photo to a server that asks a vision model (Google Gemini) for only a number, or "not readable," and the server rejects values outside a realistic range. The scanned number goes into a box so the user confirms or fixes it, and typing always works. Connecting the phone to our server taught us a lot about networking, so the rest of the app works fully on the phone with no server: readings, custom reminders, summary, and PDF. We keep the API key on the server so it is never inside the app. We used Claude, an AI assistant, to help write and debug code. We came up with the idea, rules, and design, and tested the app on our own phones.
+**4. Technical challenge:** The hardest part was making an app that is simple and safe for older adults who are not comfortable with technology: big text, plain words, and no hidden menus. Everything runs on the phone with no account and no server, including readings, custom reminders, patterns, a spoken summary, and a one-page PDF for the doctor. We also learned a lot about networking and keeping an API key safe while building a Help assistant that answers only questions about the app and never gives medical advice. We used Claude, an AI assistant, to help write and debug code. We came up with the idea, rules, and design, and tested the app on our own phones.
 
 **5. Biggest takeaway:** Designing for older adults means fewer choices, bigger text, plain words, and never trusting an AI reading without a human check. A good app is not the one with the most features, it is the one someone can use without help.
 
-**6. If we made a 2.0 version:** We would host the scan server so it is always on, let doctors set target ranges instead of using one fixed range, make the app installable directly instead of through Expo Go, add caregiver sharing with the user's consent, offer optional backup, and test it with more older adults.
+**6. If we made a 2.0 version:** Our first priority is a meter scan: the user points the phone camera at their meter and the app reads the number and logs it, with the user confirming the number first. We would also host our server so it is always on, let doctors set target ranges instead of using one fixed range, make the app installable directly instead of through Expo Go, add caregiver sharing with the user's consent, offer optional backup, and test it with more older adults.
